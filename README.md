@@ -22,10 +22,10 @@
 	Po spuštění programu nejprve rozmístíte své lodě na plánek tím, že zadáte počáteční pole
 lodě (ve tvaru písmeno řádku a číslo sloupce dohromady bez mezery, např: a1/A1 ), které potvrdíte
 klávesou enter. Následně stejným způsobem zadáte koncové pole lodě. Loď nesmí sousedit
-s jinou lodí žádným políčkem (ani rohovým). 
+s jinou lodí žádným políčkem (ani rohovým). Počítač své lodě rozmístí náhodně, ovšem se stejnými pravidly (jeho lodě se také nemohou překrývat ani spolu sousedit). 
     </p>
     <p align="justify">
-	Poté začíná fáze střílení jejíž výsledek se po každém tahu vypíše pod mapami (Váš výsledek pod mapou počítače a obráceně) a zároveň zobrazí na mapě. Vyhrává ten, komu se jako prvnímu podaří zničit všechny nepřátelské lodě.
+	Poté začíná fáze střílení jejíž výsledek se po každém tahu vypíše pod mapami (Váš výsledek pod mapou počítače a obráceně) a zároveň zobrazí na mapě. První tah je váš, druhý počítače. který bude  Vyhrává ten, komu se jako prvnímu podaří zničit všechny nepřátelské lodě.
     </p>
     
 ## Technický popis:
@@ -36,7 +36,7 @@ s jinou lodí žádným políčkem (ani rohovým).
 - Vystrel – ověřuje zda je výstřel na dané pole zásah nebo ne
 - Potopena – při zásahu lodi ověřuje zda je loď potopena či nikoliv
 - Nactilodehrace – umisťuje lodě na hráčem zadané pozice
-- Vyhodnotsituaci – zadává pole výstřelu počítače
+- Vyhodnotsituaci – zadává pole výstřelu počítače - Vybírá náhodná políčka, dokud se netrefí. Poté bude střílet na jednu z možných pozic, na které se může nacházet hráčova loď. Po potopení lodi bude opět střílet náhodně na zbylá možná pole (ty na které ještě nestřílel, ty na kterých nebyla potopená loď a její přímé okolí)
 - Souradnicepoli – generuje souradnice jednotlivých políček v okně pygame
 - Vykreslovanipole – vykresluje hrací plán na okno pygame
 ### Main:
