@@ -1,5 +1,5 @@
 # Zápočtový program
-
+[GitHub Pages](https://pages.github.com/)
 ## Zadání:
 <p align="justify">
  Hra lodě/námořní bitva 
